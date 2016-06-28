@@ -16,7 +16,7 @@ var api = new ParseServer({
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || '2cc7c323bdc48c1765d8d8d05e27d720',
   masterKey: process.env.MASTER_KEY || '51209eac0010a40227c66a9feabab99d', //Add your master key here. Keep it secret!
-  serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
+  serverURL: process.env.SERVER_URL || 'http://cryptic-escarpment-48353.herokuapp.com/parse',  // Don't forget to change to https if needed
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   }
@@ -27,7 +27,7 @@ var api = new ParseServer({
 
 var dashboard = new ParseDashboard({
   "apps": [{
-    "serverURL": process.env.SERVER_URL || 'http://localhost:1337/parse',
+    "serverURL": process.env.SERVER_URL || 'http://cryptic-escarpment-48353.herokuapp.com/parse',
     "appId": process.env.APP_ID || '2cc7c323bdc48c1765d8d8d05e27d720',
     "masterKey": process.env.MASTER_KEY || '51209eac0010a40227c66a9feabab99d',
     "appName": 'Loop'
