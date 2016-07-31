@@ -10,7 +10,7 @@ function sayHello() {
     console.log('made it this far times a million');
 
     var query = new Parse.Query('User');
-    console.log(query);
+    console.log(query.find());
     query.find({
         success: function(users) {
             console.log(users);
