@@ -5,7 +5,7 @@ console.log("at least we got this far");
 
 var Parse = require('parse/node');
 
-Parse.initialize("2cc7c323bdc48c1765d8d8d05e27d720");
+Parse.initialize('2cc7c323bdc48c1765d8d8d05e27d720', '51209eac0010a40227c66a9feabab99d');
 
   var query = new Parse.Query('User');
   query.find({
