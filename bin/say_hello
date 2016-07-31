@@ -1,4 +1,4 @@
-#! /app/.heroku/node/bin/node
+#! /app/bin/node
 function sayHello() {
   var query = new Parse.Query('User');
   query.find({
