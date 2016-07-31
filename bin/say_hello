@@ -1,7 +1,7 @@
 #! /app/.heroku/node/bin/node
 function sayHello() {
 
-var Parse = require('parse/node').Parse;
+var Parse = require('parse/node');
 
 Parse.initialize("2cc7c323bdc48c1765d8d8d05e27d720");
 
