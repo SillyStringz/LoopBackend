@@ -1,4 +1,4 @@
-#! /cryptic-escarpment-48353/bin/node
+#! /app/bin/node
 function sayHello() {
   console.log('Hello C-Mac');
 }
