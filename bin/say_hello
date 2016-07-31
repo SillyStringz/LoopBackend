@@ -5,11 +5,10 @@ var Parse = require('parse/node').Parse;
 
 Parse.initialize("2cc7c323bdc48c1765d8d8d05e27d720", "51209eac0010a40227c66a9feabab99d");
 
-  var query = new Parse.Query('User');
+  var query = new Parse.Query(Parse.User);
   query.find({
   success: function(data) {
-  	for (var i = 0; i < data.length; i++)
-  	{
+  	for (var i = 0; i < data.length; ++i) {
   		console.log(data[i].get('LastName'));
   	}
   },
