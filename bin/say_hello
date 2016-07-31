@@ -1,6 +1,8 @@
 #! /app/.heroku/node/bin/node
 function sayHello() {
 
+console.log("at least we got this far");
+
 var Parse = require('parse/node');
 
 Parse.initialize("2cc7c323bdc48c1765d8d8d05e27d720");
@@ -8,7 +10,8 @@ Parse.initialize("2cc7c323bdc48c1765d8d8d05e27d720");
   var query = new Parse.Query('User');
   query.find({
   success: function(data) {
-  	for (var i = 0; i < data.length; ++i) {
+  console.log(data);
+  	for (var i = 0; i < data.length; i++) {
   		console.log(data[i].get('LastName'));
   	}
   },
