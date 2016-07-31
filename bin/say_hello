@@ -2,12 +2,12 @@
 
 var Parse = require('parse/node').Parse;
 
-Parse.initialize('2cc7c323bdc48c1765d8d8d05e27d720', '51209eac0010a40227c66a9feabab99d');
+Parse.initialize('2cc7c323bdc48c1765d8d8d05e27d720');
 
 function sayHello() {
 
     console.log('made it this far times a million');
-    console.log(Parse.initialize);
+    console.log(Parse.Query('User'));
 
     var query = new Parse.Query('User');
     query.find({
