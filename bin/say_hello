@@ -7,6 +7,7 @@ Parse.initialize('2cc7c323bdc48c1765d8d8d05e27d720', '51209eac0010a40227c66a9fea
 function sayHello() {
 
     console.log('made it this far times a million');
+    console.log(Parse);
 
     var query = new Parse.Query('User');
     query.find({
