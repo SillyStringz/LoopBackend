@@ -1,28 +1,30 @@
 #! /app/.heroku/node/bin/node
 
-var Parse = require('parse/node');
+var Parse = require('parse/node').Parse;
 
-    Parse.initialize("2cc7c323bdc48c1765d8d8d05e27d720");
-    Parse.serverURL = "http://cryptic-escarpment-48353.herokuapp.com/parse";
+Parse.initialize('2cc7c323bdc48c1765d8d8d05e27d720');
+Parse.serverURL = 'http://cryptic-escarpment-48353.herokuapp.com/parse';
+
 
 function sayHello() {
 
-console.log("made it this far");
+    console.log('made it this far');
 
-  var query = new Parse.Query('User');
-  query.find({
-  success: function(data) {
-  console.log(data);
-  	for (var i = 0; i < data.length; i++) {
-  		console.log(data[i].get('LastName'));
-  	}
-  },
-  error: function(err) {
-  	console.log(err);
-  }
+    var query = new Parse.Query(Parse.User);
+    query.find({
+        success: function(users) {
+            console.log(users);
+            for (var i = 0; i < users.length; i++) {
+                console.log(users[i].get('LastName'));
+            }
+        },
+        error: function(err) {
+            console.log(err);
+        }
 
-  })
+    })
 
 }
+
 sayHello();
 process.exit();
