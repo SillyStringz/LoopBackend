@@ -3,7 +3,7 @@
 var Parse = require('parse/node').Parse;
 
 Parse.initialize('2cc7c323bdc48c1765d8d8d05e27d720');
-console.log(Parse.initialize('2cc7c323bdc48c1765d8d8d05e27d720'));
+console.log(Parse.initialize());
 
 function sayHello() {
 
