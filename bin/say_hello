@@ -1,6 +1,19 @@
 #! /app/.heroku/node/bin/node
 function sayHello() {
-  console.log('Hello C-Mac');
+  var query = new Parse.Query('User');
+  query.find({
+  success: function(data) {
+  	for (var i = 0; i < data.length; i++)
+  	{
+  		console.log(data[i].get('LastName'));
+  	}
+  },
+  error: function(err) {
+  	console.log(err);
+  }
+
+  })
+
 }
 sayHello();
 process.exit();
