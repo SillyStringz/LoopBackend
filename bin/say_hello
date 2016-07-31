@@ -8,9 +8,9 @@ console.log(Parse.initialize);
 function sayHello() {
 
     console.log('made it this far times a million');
-    console.log(Parse.Query(Parse.User).find());
 
     var query = new Parse.Query('User');
+    console.log(query);
     query.find({
         success: function(users) {
             console.log(users);
