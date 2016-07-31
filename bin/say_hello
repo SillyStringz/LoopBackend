@@ -8,7 +8,7 @@ function sayHello() {
 
     console.log('made it this far');
 
-    var query = new Parse.Query(Parse.User);
+    var query = new Parse.Query('User');
     query.find({
         success: function(users) {
             console.log(users);
